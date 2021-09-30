@@ -30,7 +30,9 @@ public class BinarySearch {
         int l = 0, r = array.length - 1, m;
 
         while (l <= r) {
-            m = (l + r) / 2;
+            // m = (l + r) / 2; // 存在整数溢出的 bug
+            // m = l + (r - l) / 2;
+            m = (r + l) >>> 1; // 位运算
             if (array[m] == target) {
                 return m;
             } else if (array[m] > target) {
