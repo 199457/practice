@@ -2,10 +2,13 @@ package com.wei;
 
 import java.util.Arrays;
 
+/**
+ * 冒泡排序
+ */
 public class BubbleSort {
     public static void main(String[] args) {
 
-        int[] arr = {3, 1, 10, 4, 5, 8, 2, 9, 7, 6};
+        int[] arr = {1, 3, 10, 4, 5, 8, 2, 9, 7, 6};
         // 交换的最大次数
         int len = arr.length - 1;
 
@@ -20,7 +23,7 @@ public class BubbleSort {
             }
             len = last;
             System.out.println(Arrays.toString(arr));
-        } while (len != 1);
+        } while (len != 0);
     }
 
     // 交换位置
