@@ -14,6 +14,7 @@ public class InsertSort {
         for (int i = 1; i < arr.length; i++) {
             int tmp = arr[i]; // 待插入的值
             int j = i - 1; // 已排序区的元素索引
+            // 从右向左对比值
             while (j >= 0) {
                 if (tmp < arr[j]) {
                     arr[j + 1] = arr[j];
